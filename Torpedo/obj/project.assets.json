@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\hiper\\.nuget\\packages\\": {}
+    "C:\\Users\\stigi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hiper\\Dokumentumok\\Torpedo\\Torpedo\\Torpedo.csproj",
+      "projectUniqueName": "C:\\Users\\stigi\\Desktop\\5. felev\\C#\\Project\\Torpedo\\Torpedo.csproj",
       "projectName": "Torpedo",
-      "projectPath": "C:\\Users\\hiper\\Dokumentumok\\Torpedo\\Torpedo\\Torpedo.csproj",
-      "packagesPath": "C:\\Users\\hiper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hiper\\Dokumentumok\\Torpedo\\Torpedo\\obj\\",
+      "projectPath": "C:\\Users\\stigi\\Desktop\\5. felev\\C#\\Project\\Torpedo\\Torpedo.csproj",
+      "packagesPath": "C:\\Users\\stigi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\stigi\\Desktop\\5. felev\\C#\\Project\\Torpedo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hiper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\stigi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
