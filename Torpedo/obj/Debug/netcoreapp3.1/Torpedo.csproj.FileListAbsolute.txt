@@ -1,0 +1,5 @@
+C:\Users\hiper\Dokumentumok\Torpedo\Torpedo\obj\Debug\netcoreapp3.1\Torpedo.csprojAssemblyReference.cache
+C:\Users\hiper\Dokumentumok\Torpedo\Torpedo\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\hiper\Dokumentumok\Torpedo\Torpedo\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\hiper\Dokumentumok\Torpedo\Torpedo\obj\Debug\netcoreapp3.1\Torpedo_MarkupCompile.cache
+C:\Users\hiper\Dokumentumok\Torpedo\Torpedo\obj\Debug\netcoreapp3.1\Torpedo_MarkupCompile.lref

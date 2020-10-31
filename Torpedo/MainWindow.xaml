@@ -9,13 +9,13 @@
     <Grid>
         
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-            <TextBlock Text="Current player:" Width="140" Margin="285,5,0,0" FontSize="20"/>
-            <TextBlock x:Name="currentPlayer"/>
+            <TextBlock Text="Current player: " Width="140" Margin="285,5,0,0" FontSize="20" TextAlignment="Right"/>
+            <TextBlock x:Name="currentPlayer" Text="player1" FontSize="20" Margin="5"/>
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Margin="30,35,0,0" >
-            <TextBlock x:Name="player1"  FontSize="19" Width="360" TextAlignment="Center"/>
-            <TextBlock x:Name="player2"  FontSize="19" Width="360" Margin="70,0,0,0" TextAlignment="Center"/>
+            <TextBlock x:Name="player1" Text="player1" FontSize="19" Width="360" TextAlignment="Center"/>
+            <TextBlock x:Name="player2" Text="player2" FontSize="19" Width="360" Margin="70,0,0,0" TextAlignment="Center"/>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal">
