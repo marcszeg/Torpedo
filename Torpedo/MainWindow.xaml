@@ -5,8 +5,593 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Torpedo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" ResizeMode="NoResize" Height="510" Width="850">
     <Grid>
+        
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+            <TextBlock Text="Current player:" Width="140" Margin="285,5,0,0" FontSize="20"/>
+            <TextBlock x:Name="currentPlayer"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Margin="30,35,0,0" >
+            <TextBlock x:Name="player1"  FontSize="19" Width="360" TextAlignment="Center"/>
+            <TextBlock x:Name="player2"  FontSize="19" Width="360" Margin="70,0,0,0" TextAlignment="Center"/>
+        </StackPanel>
 
+        <StackPanel Orientation="Horizontal">
+            <TextBlock x:Name="timer" Text="timer" FontSize="19" Width="80" Margin="385,440,0,0" TextAlignment="Center"/>
+        </StackPanel>
+
+        <Grid HorizontalAlignment="Left" Width="360" Height="360" VerticalAlignment="Top" Margin="30,65,0,0" x:Name="LeftGrid" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0" Background="DodgerBlue">
+                <Label Content=""/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="A"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="2" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="B"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="C"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="4" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="D"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="5" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="E"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="6" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="F"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="7" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="G"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="8" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="H"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="9" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="I"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="10" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="J"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="11" Background="DodgerBlue">
+                <Label Content=""/>
+            </Grid>
+
+
+            <Grid Grid.Row="1" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="1"/>
+            </Grid>
+            <Grid x:Name="L_A1" Grid.Row="1" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_A2" Grid.Row="1" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_A3" Grid.Row="1" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_A4" Grid.Row="1" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_A5" Grid.Row="1" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_A6" Grid.Row="1" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_A7" Grid.Row="1" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_A8" Grid.Row="1" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_A9" Grid.Row="1" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_A10" Grid.Row="1" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="1" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="1"/>
+            </Grid>
+
+
+            <Grid Grid.Row="2" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="2"/>
+            </Grid>
+            <Grid x:Name="L_B1" Grid.Row="2" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_B2" Grid.Row="2" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_B3" Grid.Row="2" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_B4" Grid.Row="2" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_B5" Grid.Row="2" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_B6" Grid.Row="2" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_B7" Grid.Row="2" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_B8" Grid.Row="2" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_B9" Grid.Row="2" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_B10" Grid.Row="2" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="2" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="2"/>
+            </Grid>
+
+
+            <Grid Grid.Row="3" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="3"/>
+            </Grid>
+            <Grid x:Name="L_C1" Grid.Row="3" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_C2" Grid.Row="3" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_C3" Grid.Row="3" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_C4" Grid.Row="3" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_C5" Grid.Row="3" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_C6" Grid.Row="3" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_C7" Grid.Row="3" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_C8" Grid.Row="3" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_C9" Grid.Row="3" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_C10" Grid.Row="3" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="3" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="3"/>
+            </Grid>
+
+
+            <Grid Grid.Row="4" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="4"/>
+            </Grid>
+            <Grid x:Name="L_D1" Grid.Row="4" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_D2" Grid.Row="4" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_D3" Grid.Row="4" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_D4" Grid.Row="4" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue" ></Grid>
+            <Grid x:Name="L_D5" Grid.Row="4" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_D6" Grid.Row="4" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_D7" Grid.Row="4" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_D8" Grid.Row="4" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_D9" Grid.Row="4" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_D10" Grid.Row="4" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="4" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="4"/>
+            </Grid>
+
+
+            <Grid Grid.Row="5" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="5"/>
+            </Grid>
+            <Grid x:Name="L_E1" Grid.Row="5" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_E2" Grid.Row="5" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_E3" Grid.Row="5" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_E4" Grid.Row="5" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_E5" Grid.Row="5" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_E6" Grid.Row="5" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_E7" Grid.Row="5" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_E8" Grid.Row="5" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_E9" Grid.Row="5" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_E10" Grid.Row="5" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="5" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="5"/>
+            </Grid>
+
+
+            <Grid Grid.Row="6" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="6"/>
+            </Grid>
+            <Grid x:Name="L_F1" Grid.Row="6" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_F2" Grid.Row="6" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_F3" Grid.Row="6" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_F4" Grid.Row="6" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_F5" Grid.Row="6" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_F6" Grid.Row="6" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_F7" Grid.Row="6" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_F8" Grid.Row="6" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_F9" Grid.Row="6" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_F10" Grid.Row="6" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="6" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="6"/>
+            </Grid>
+
+
+            <Grid Grid.Row="7" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="7"/>
+            </Grid>
+            <Grid x:Name="L_G1" Grid.Row="7" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_G2" Grid.Row="7" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_G3" Grid.Row="7" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_G4" Grid.Row="7" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_G5" Grid.Row="7" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_G6" Grid.Row="7" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_G7" Grid.Row="7" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_G8" Grid.Row="7" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_G9" Grid.Row="7" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_G10" Grid.Row="7" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="7" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="7"/>
+            </Grid>
+
+
+            <Grid Grid.Row="8" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="8"/>
+            </Grid>
+            <Grid x:Name="L_H1" Grid.Row="8" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_H2" Grid.Row="8" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_H3" Grid.Row="8" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_H4" Grid.Row="8" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_H5" Grid.Row="8" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_H6" Grid.Row="8" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_H7" Grid.Row="8" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_H8" Grid.Row="8" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_H9" Grid.Row="8" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_H10" Grid.Row="8" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="8" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="8"/>
+            </Grid>
+
+
+            <Grid Grid.Row="9" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="9"/>
+            </Grid>
+            <Grid x:Name="L_I1" Grid.Row="9" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_I2" Grid.Row="9" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_I3" Grid.Row="9" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_I4" Grid.Row="9" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_I5" Grid.Row="9" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_I6" Grid.Row="9" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_I7" Grid.Row="9" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_I8" Grid.Row="9" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_I9" Grid.Row="9" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_I10" Grid.Row="9" Grid.Column="10" MouseDown="gridMouseDown"  Background="LightBlue"></Grid>
+            <Grid Grid.Row="9" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="9"/>
+            </Grid>
+
+
+            <Grid Grid.Row="10" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="10"/>
+            </Grid>
+            <Grid x:Name="L_J1" Grid.Row="10" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_J2" Grid.Row="10" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_J3" Grid.Row="10" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_J4" Grid.Row="10" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_J5" Grid.Row="10" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_J6" Grid.Row="10" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_J7" Grid.Row="10" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_J8" Grid.Row="10" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_J9" Grid.Row="10" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="L_J10" Grid.Row="10" Grid.Column="10" MouseDown="gridMouseDown"  Background="LightBlue"></Grid>
+            <Grid Grid.Row="10" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="10"/>
+            </Grid>
+
+
+            <Grid Grid.Row="11" Grid.Column="0" Background="DodgerBlue">
+                <Label Content=""/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="1" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="A"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="2" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="B"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="3" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="C"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="4" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="D"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="5" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="E"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="6" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="F"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="7" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="G"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="8" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="H"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="9" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="I"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="10" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="J"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="11" Background="DodgerBlue">
+                <Label Content=""/>
+            </Grid>
+        </Grid>
+
+        <Grid HorizontalAlignment="Left" Width="360" Height="360" VerticalAlignment="Top"  Margin="460,65,0,0" x:Name="RightGrid" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0" Background="DodgerBlue">
+                <Label Content=""/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="A"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="2" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="B"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="C"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="4" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="D"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="5" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="E"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="6" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="F"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="7" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="G"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="8" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="H"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="9" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="I"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="10" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="J"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="11" Background="DodgerBlue">
+                <Label Content=""/>
+            </Grid>
+
+
+            <Grid Grid.Row="1" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="1"/>
+            </Grid>
+            <Grid x:Name="R_A1" Grid.Row="1" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_A2" Grid.Row="1" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_A3" Grid.Row="1" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_A4" Grid.Row="1" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_A5" Grid.Row="1" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_A6" Grid.Row="1" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_A7" Grid.Row="1" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_A8" Grid.Row="1" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_A9" Grid.Row="1" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_A10" Grid.Row="1" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="1" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="1"/>
+            </Grid>
+
+
+            <Grid Grid.Row="2" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="2"/>
+            </Grid>
+            <Grid x:Name="R_B1" Grid.Row="2" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_B2" Grid.Row="2" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_B3" Grid.Row="2" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_B4" Grid.Row="2" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_B5" Grid.Row="2" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_B6" Grid.Row="2" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_B7" Grid.Row="2" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_B8" Grid.Row="2" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_B9" Grid.Row="2" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_B10" Grid.Row="2" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="2" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="2"/>
+            </Grid>
+
+
+            <Grid Grid.Row="3" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="3"/>
+            </Grid>
+            <Grid x:Name="R_C1" Grid.Row="3" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_C2" Grid.Row="3" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_C3" Grid.Row="3" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_C4" Grid.Row="3" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_C5" Grid.Row="3" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_C6" Grid.Row="3" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_C7" Grid.Row="3" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_C8" Grid.Row="3" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_C9" Grid.Row="3" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_C10" Grid.Row="3" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="3" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="3"/>
+            </Grid>
+
+
+            <Grid Grid.Row="4" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="4"/>
+            </Grid>
+            <Grid x:Name="R_D1" Grid.Row="4" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_D2" Grid.Row="4" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_D3" Grid.Row="4" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_D4" Grid.Row="4" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue" ></Grid>
+            <Grid x:Name="R_D5" Grid.Row="4" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_D6" Grid.Row="4" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_D7" Grid.Row="4" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_D8" Grid.Row="4" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_D9" Grid.Row="4" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_D10" Grid.Row="4" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="4" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="4"/>
+            </Grid>
+
+
+            <Grid Grid.Row="5" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="5"/>
+            </Grid>
+            <Grid x:Name="R_E1" Grid.Row="5" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_E2" Grid.Row="5" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_E3" Grid.Row="5" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_E4" Grid.Row="5" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_E5" Grid.Row="5" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_E6" Grid.Row="5" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_E7" Grid.Row="5" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_E8" Grid.Row="5" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_E9" Grid.Row="5" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_E10" Grid.Row="5" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="5" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="5"/>
+            </Grid>
+
+
+            <Grid Grid.Row="6" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="6"/>
+            </Grid>
+            <Grid x:Name="R_F1" Grid.Row="6" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_F2" Grid.Row="6" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_F3" Grid.Row="6" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_F4" Grid.Row="6" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_F5" Grid.Row="6" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_F6" Grid.Row="6" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_F7" Grid.Row="6" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_F8" Grid.Row="6" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_F9" Grid.Row="6" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_F10" Grid.Row="6" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="6" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="6"/>
+            </Grid>
+
+
+            <Grid Grid.Row="7" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="7"/>
+            </Grid>
+            <Grid x:Name="R_G1" Grid.Row="7" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_G2" Grid.Row="7" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_G3" Grid.Row="7" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_G4" Grid.Row="7" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_G5" Grid.Row="7" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_G6" Grid.Row="7" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_G7" Grid.Row="7" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_G8" Grid.Row="7" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_G9" Grid.Row="7" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_G10" Grid.Row="7" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="7" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="7"/>
+            </Grid>
+
+
+            <Grid Grid.Row="8" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="8"/>
+            </Grid>
+            <Grid x:Name="R_H1" Grid.Row="8" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_H2" Grid.Row="8" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_H3" Grid.Row="8" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_H4" Grid.Row="8" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_H5" Grid.Row="8" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_H6" Grid.Row="8" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_H7" Grid.Row="8" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_H8" Grid.Row="8" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_H9" Grid.Row="8" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_H10" Grid.Row="8" Grid.Column="10" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid Grid.Row="8" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="8"/>
+            </Grid>
+
+
+            <Grid Grid.Row="9" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="9"/>
+            </Grid>
+            <Grid x:Name="R_I1" Grid.Row="9" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_I2" Grid.Row="9" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_I3" Grid.Row="9" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_I4" Grid.Row="9" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_I5" Grid.Row="9" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_I6" Grid.Row="9" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_I7" Grid.Row="9" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_I8" Grid.Row="9" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_I9" Grid.Row="9" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_I10" Grid.Row="9" Grid.Column="10" MouseDown="gridMouseDown"  Background="LightBlue"></Grid>
+            <Grid Grid.Row="9" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="9"/>
+            </Grid>
+
+
+            <Grid Grid.Row="10" Grid.Column="0" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="10"/>
+            </Grid>
+            <Grid x:Name="R_J1" Grid.Row="10" Grid.Column="1" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_J2" Grid.Row="10" Grid.Column="2" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_J3" Grid.Row="10" Grid.Column="3" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_J4" Grid.Row="10" Grid.Column="4" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_J5" Grid.Row="10" Grid.Column="5" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_J6" Grid.Row="10" Grid.Column="6" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_J7" Grid.Row="10" Grid.Column="7" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_J8" Grid.Row="10" Grid.Column="8" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_J9" Grid.Row="10" Grid.Column="9" MouseDown="gridMouseDown" Background="LightBlue"></Grid>
+            <Grid x:Name="R_J10" Grid.Row="10" Grid.Column="10" MouseDown="gridMouseDown"  Background="LightBlue"></Grid>
+            <Grid Grid.Row="10" Grid.Column="11" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="10"/>
+            </Grid>
+
+
+            <Grid Grid.Row="11" Grid.Column="0" Background="DodgerBlue">
+                <Label Content=""/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="1" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="A"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="2" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="B"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="3" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="C"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="4" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="D"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="5" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="E"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="6" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="F"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="7" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="G"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="8" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="H"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="9" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="I"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="10" Background="DodgerBlue">
+                <Label HorizontalAlignment="center" VerticalAlignment="center" FontWeight="Bold" FontSize="15" Content="J"/>
+            </Grid>
+            <Grid Grid.Row="11" Grid.Column="11" Background="DodgerBlue">
+                <Label Content=""/>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
